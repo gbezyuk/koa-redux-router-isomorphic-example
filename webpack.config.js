@@ -1,4 +1,5 @@
-webpack = require('webpack');
+var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: "./src/client.js",
@@ -8,7 +9,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.styl$/, loader: "style!css!stylus" }, //style!css!autoprefixer!stylus
+            { test: /\.styl$/, loader: "style!css!postcss!stylus" }, //style!css!autoprefixer!stylus
             { test: /\.jpg$/, loader: "file?name=[path][name].[ext]?[hash]"},
             { test: /\.png$/, loader: "file?name=[path][name].[ext]?[hash]"},
             {
@@ -20,9 +21,12 @@ module.exports = {
     },
     plugins: [
       new webpack.DefinePlugin({
-          "process.env": {
-            IS_BUNDLING_FOR_BROWSER: true
-          }
-        }),
-      ]
+        "process.env": {
+          IS_BUNDLING_FOR_BROWSER: true
+        }
+      }),
+    ],
+    postcss: [
+      autoprefixer({ browsers: ['last 2 versions'] })
+    ]
 };

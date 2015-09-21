@@ -8,7 +8,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.styl$/, loader: "style!css!stylus" }, //!css!autoprefixer
+            { test: /\.styl$/, loader: "style!css!stylus" }, //style!css!autoprefixer!stylus
             { test: /\.jpg$/, loader: "file?name=[path][name].[ext]?[hash]"},
             { test: /\.png$/, loader: "file?name=[path][name].[ext]?[hash]"},
             {

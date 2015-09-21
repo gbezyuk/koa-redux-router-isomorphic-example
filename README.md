@@ -16,6 +16,8 @@ babel-node src/server.js
 * Three routes: index, about, 404
 * Server-side rendering using Koa
 * Asset bundling using WebPack
+* ES6 with Babel
 
 ## Known Issues
 * Home link is always active. IndexLink usage is causing application failure, see [Navigation.js](src/components/elements/Navigation.js)
+* Enabling Autoprefixer in [webpack stylus-related configuration](webpack.config.js:11) also results in a webpack build failure (CssSyntaxError occurs)

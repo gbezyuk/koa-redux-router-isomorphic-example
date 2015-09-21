@@ -20,4 +20,4 @@ babel-node src/server.js
 
 ## Known Issues
 * Home link is always active. IndexLink usage is causing application failure, see [Navigation.js](src/components/elements/Navigation.js)
-* Enabling Autoprefixer in [webpack stylus-related configuration](webpack.config.js:11) also results in a webpack build failure (CssSyntaxError occurs)
+* Enabling Autoprefixer in [webpack stylus-related configuration](webpack.config.js) also results in a webpack build failure (CssSyntaxError occurs)

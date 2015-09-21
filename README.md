@@ -18,4 +18,4 @@ babel-node src/server.js
 * Asset bundling using WebPack
 
 ## Known Issues
-* Home link is always active. IndexLink usage is causing application failure, see src/components/elements/Navigation.js
+* Home link is always active. IndexLink usage is causing application failure, see [Navigation.js](src/components/elements/Navigation.js)

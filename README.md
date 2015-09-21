@@ -4,8 +4,7 @@
 A simple example of a isomorphic (universal) javascript application using Koa and React-Router.
 
 ## Example
-http://koa-react-router-isomorphic-example.gbezyuk.ru
-
+http://koa-react-router-isomorphic-example.gbezyuk.ru:3030
 ## Development Setup
 ```
 # npm install -g webpack

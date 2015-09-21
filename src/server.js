@@ -9,6 +9,7 @@ import NotFound from './components/handlers/NotFound'
 import pkg from '../package'
 
 var app = koa();
+var port = process.env.PORT || 3000;
 
 app.use(serve('./dist'))
 
@@ -34,4 +35,4 @@ app.use(function *(){
   })
 });
 
-app.listen(3000, () => { console.log(pkg.name + ' is listening on port 3000') } )
+app.listen(port, () => { console.log(pkg.name + ' is listening on port ' + port) } )

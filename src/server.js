@@ -10,6 +10,7 @@ import pkg from '../package'
 
 var app = koa();
 var port = process.env.PORT || 3000;
+var host = process.env.HOST || 'localhost';
 
 app.use(serve('./dist'))
 
@@ -35,4 +36,4 @@ app.use(function *(){
   })
 });
 
-app.listen(port, () => { console.log(pkg.name + ' is listening on port ' + port) } )
+app.listen(port, host, () => { console.log(pkg.name + ' is listening on ' + host + ':' + port) } )

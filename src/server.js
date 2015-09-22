@@ -1,12 +1,12 @@
-import routes from './routes'
 import koa from 'koa'
-var serve = require('koa-static-folder');
+import serve from 'koa-static-folder'
 import createLocation from 'history/lib/createLocation'
 import { RoutingContext, match } from 'react-router'
 import { renderToString } from 'react-dom/server'
 import React from 'react'
 import NotFound from './components/handlers/NotFound'
 import pkg from '../package'
+import routes from './routes'
 
 var app = koa();
 var port = process.env.PORT || 3000;
@@ -29,8 +29,8 @@ app.use(function *(){
       if (renderProps.components.indexOf(NotFound) != -1) {
         this.status = 404
       }
-      this.response.body = '<html><head><title>Example Koa + React-Router App</title><script src="/dist/bundle.js"></script></head><body>' +
-        renderToString(<RoutingContext {...renderProps}/>)
+      this.response.body = '<html><head><title>Example Koa + React-Router App</title><script src="/dist/bundle.js"></script></head><body onLoad="initApp()">' +
+        '<div id="root">' + renderToString(<RoutingContext {...renderProps}/>) + '</div>'
         + '</body></html>'
     }
   })

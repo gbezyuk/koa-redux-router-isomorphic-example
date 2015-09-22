@@ -1,19 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
 html
+  height 100%
   margin 0
   padding 0
   font-size 10px
+  font-family Roboto, Tahoma, Arial, sans-serif
+  font-size 10px
 
 body
+  height 100%
   margin 0
   padding 0
 
-#app
-  width 300px
-  padding 10px
-  margin 0 auto
+  a
+    color black
+    text-decoration underline
 
-#content
-  padding 10px
-  margin 0
-  text-align center
-  font-size 2rem
+    &:visited
+      color darkgray
+
+    &:hover
+      color lightgray
+
+  #root
+    width 100%
+    min-height 100%
+    display flex
+    justify-content center
+    align-items center
+    align-content center
+
+    #app
+      width 300px
+      padding 10px
+
+      #content
+        padding 10px
+        margin 0
+        text-align center
+        font-size 2rem

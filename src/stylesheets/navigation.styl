@@ -2,6 +2,7 @@
   margin 0
   padding 0
   border-bottom 1px solid black
+  text-align right
 
   a
     display inline-block
@@ -15,6 +16,13 @@
 
     &.active
       color gold
+      font-weight bold
 
     &:hover
       text-decoration underline
+
+    &:first-child
+      padding-left 0
+
+    &:last-child
+      padding-right 0
